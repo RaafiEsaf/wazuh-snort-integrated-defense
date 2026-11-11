@@ -1,0 +1,12 @@
+<!-- Custom decoder for Snort 3 alert_fast output used in this lab. -->
+<decoder name="snort3-fast">
+  <type>ids</type>
+  <prematch type="pcre2">^(?:\[block\]\s+)?\[\*\*\]\s+\[\d+:\d+:\d+\]</prematch>
+</decoder>
+
+<decoder name="snort3-fast-detail">
+  <parent>snort3-fast</parent>
+  <type>ids</type>
+  <regex type="pcre2">^(?:\[block\]\s+)?\[\*\*\]\s+\[(\d+:\d+:\d+)\]\s+"([^"]+)"\s+\[\*\*\]\s+\[Priority:\s*(\d+)\]\s+\{([^}]+)\}\s+(\d+\.\d+\.\d+\.\d+)(?::(\d+))?\s+->\s+(\d+\.\d+\.\d+\.\d+)(?::(\d+))?$</regex>
+  <order>id,description,priority,protocol,srcip,srcport,dstip,dstport</order>
+</decoder>

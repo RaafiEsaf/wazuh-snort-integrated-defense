@@ -1,0 +1,9 @@
+<!-- Custom Wazuh rule verified by this lab. Add inside the existing local_rules.xml group structure. -->
+<group name="local,snort,ids,">
+  <rule id="100204" level="12">
+    <decoded_as>snort3-fast</decoded_as>
+    <match>LAB IPS - ICMP blocked from Kali to Windows</match>
+    <description>Snort IPS BLOCKED ICMP packet from Kali to Windows.</description>
+    <group>ids,snort,ips,</group>
+  </rule>
+</group>

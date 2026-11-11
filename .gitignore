@@ -1,0 +1,30 @@
+# Secrets and generated credentials
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+*password*
+*wazuh-install-files.tar
+wazuh-install-files/
+
+# Logs and packet captures
+*.log
+*.jsonl
+*.pcap
+*.pcapng
+
+# Virtual machine disks / exports
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
